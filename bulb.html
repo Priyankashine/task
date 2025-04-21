@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #f6d365 0%, #fa8e71 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    img {
+        transition: transform 0.3s ease;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+</style>
+<body>
+    <img src="bulboff.jpeg" alt="bulb" id="bulb" width="200px" height="200px">
+    <br> <br>
+    <button onclick="changeImage()">Click to change image</button>
+
+    <script>
+        let isBulbOn = false;
+
+function changeImage() {
+    const bulb = document.getElementById('bulb');
+    bulb.src = isBulbOn ? 'bulboff.jpeg' : 'bulbon.jpeg';
+    isBulbOn = !isBulbOn;}
+    </script>
+ 
+    
+</body>
+</html>
